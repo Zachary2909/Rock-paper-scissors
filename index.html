@@ -1,1 +1,75 @@
-console.log("Hello World"); test
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    
+    const computerPlay = computerPLay()
+    
+    function computerPLay() {var numb = Math.floor(Math.random() * 3) + 1;
+    
+        if(numb === 1) {var computerpick = "rock" }
+
+    else if(numb === 2) {var computerpick = "paper" }
+
+    else { computerpick = "scissors" }
+
+    
+    return computerpick
+    }
+
+
+    function playerpick() {let picking = prompt( );
+
+    let playerSelc = picking.toLowerCase()
+
+    if (playerSelc === "rock") {return pick}
+
+    else if (playerSelc === "scissors") {return pick}
+
+    else if (playerSelc === "paper") {return pick}
+
+    else { return "not vaild pick please pick rock, paper, or scissors" }
+
+    
+
+
+
+}
+const playerSelcs = "scissors"
+const computerSelc = computerPlay
+
+
+function game(playerSelc,computerSelc) {
+  
+  
+  //rock results 
+  if      (playerSelcs === "rock" && computerSelc === "rock") {return "Rock ties with Rock"}
+  else if (playerSelcs === "rock" && computerSelc === "paper") {return "Rock loses to Paper"}
+  else if (playerSelcs === "rock" && computerSelc === "scissors") {return "Rock beats scissors"}
+
+  else if (playerSelcs === "paper" && computerSelc === "paper") {return "paper ties with paper"}
+  else if (playerSelcs === "paper" && computerSelc === "scissors") {return "paper loses to scissors"}
+  else if (playerSelcs === "paper" && computerSelc === "rock") {return "paper beats rock"}
+
+  else if (playerSelcs === "scissors" && computerSelc === "scissors") {return "scissors ties with scissors"}
+  else if (playerSelcs === "scissors" && computerSelc === "rock") {return "scissors loses to rock"}
+  else if (playerSelcs === "scissors" && computerSelc === "paper") {return "scissors beats paper"}
+ 
+  else return "something went bad"
+
+return playerSelc + " " + computerSelc
+
+  
+
+
+
+}
+
+
+  </script>
+</body>
+</html>
