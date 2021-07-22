@@ -13,13 +13,6 @@
 
       let computerWins = 0    
 
-      var Playscore = 0
-
-      var cscore = 0
-      var fu = 1
-      while (playerWins !=5 && computerWins !=5) {
-
-
     const computerPlay = computerPLay()
 
     const playerpick = playerPick()
@@ -32,23 +25,28 @@
     const wins =  ScoreKeep()
     if( wins === "win") {
      
-  
-    playerWins++;
+    let Pwins = 0
+    let Cwins = 0 
+
+    let playerWins = Pwins + 1
      
    var Playscore = playerWins 
    
- }
+   var cscore = computerWins}
     
    else if (wins === "loss") {
-      
-    computerWins++;
-    
-    var cscore = computerWins
-   
-    
+    let Pwins = 0
+      let Cwins = 0  
 
-  }
-    else {}
+    let computerWins = Cwins + 1
+      var cscore = 0
+   
+      
+
+   var cscore = computerWins
+   var Playscore = playerWins}
+    else {var cscore = computerWins
+          var Playscore = playerWins}
     
     const winner = play(computerSelc,playerSelc); 
     
@@ -126,7 +124,7 @@ function ScoreKeep() {
   else if (playerSelc === "paper" && computerSelc === "scissors") {var wins = "loss"}
   else if (playerSelc === "paper" && computerSelc === "rock") {var wins = "win"}
   //scissor results
-  else if (playerSelc === "scissors" && computerSelc === "scissors") {  }
+  else if (playerSelc === "scissors" && computerSelc === "scissors") {var wins = "loss"}
   else if (playerSelc === "scissors" && computerSelc === "rock") {var wins = "loss"}
   else if (playerSelc === "scissors" && computerSelc === "paper") {var wins = "win"}
  
@@ -134,17 +132,10 @@ function ScoreKeep() {
 
   return wins
 }
-      
-console.log(winner + " " + "The score is: " + Playscore + " " + cscore)
-}
 
-if (playerWins=5) {return "Congrulation you won."}
-else {return "Too bad player. Computer Wins"}
-
+return winner + " " + "The score is: " + Playscore + " " + cscore
 
 }
-
-
   </script>
 </body>
 </html>
